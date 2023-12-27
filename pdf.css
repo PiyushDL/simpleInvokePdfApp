@@ -39,16 +39,3 @@
  .pdfButtons:hover {
      background-color: #0056b3;
  }
-
- #openPdfButton {
-     position: fixed;
-     left: 50%;
-     top: 25%;
-     z-index: 1000;
-     padding: 10px;
-     background-color: #007BFF;
-     color: #ffffff;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
- }

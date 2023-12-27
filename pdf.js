@@ -14,9 +14,6 @@ function openPdf() {
 }
 
 function showAllPages() {
-    const openPdfButton = document.getElementById('openPdfButton')
-    openPdfButton.style.display = 'none';
-
     for (let pageNumber = 1; pageNumber <= pdfInstance.numPages; pageNumber++) {
         pdfInstance.getPage(pageNumber).then(function (page) {
             const scale = 1.5;
@@ -41,8 +38,6 @@ function showAllPages() {
 function clearPdfViewer() {
     const pdfViewer = document.getElementById('pdfViewer');
     pdfViewer.innerHTML = '';
-    const openPdfButton = document.getElementById('openPdfButton')
-    openPdfButton.style.display = 'block';
 }
 
 function redirect() {
