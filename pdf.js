@@ -1,8 +1,9 @@
 let pdfInstance;
+let pdfNumber = ""
 
-function openPdf() {
+function openPdf(value) {
     const pdfPath = './demopdf.pdf';
-
+    pdfNumber = value
     pdfjsLib.getDocument(pdfPath).promise.then(function (pdf) {
         pdfInstance = pdf;
         showAllPages();
@@ -41,7 +42,11 @@ function clearPdfViewer() {
 }
 
 function redirect() {
-    window.open('https://dlzchui.azurewebsites.net/rfelogs/create-rfelog?invokeAppId=4612376', '_blank')
+    if (pdfNumber === '1') {
+        window.open('https://dlzchui.azurewebsites.net/rfelogs/create-rfelog?invokeAppId=789012&lob=441599652036479', '_blank')
+    } else {
+        window.open('https://dlzchui.azurewebsites.net/rfelogs/create-rfelog?invokeAppId=123456&lob=441599652353885', '_blank')
+    }
     closePdfViewer()
 }
 
