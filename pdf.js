@@ -43,9 +43,9 @@ function clearPdfViewer() {
 
 function redirect() {
     if (pdfNumber === '1') {
-        window.open('http://localhost:3000/rfelogs/create-rfelog?invokeAppId=789012&lob=Surety%20Bond%20-%20for%20other%20facilities', '_blank')
+        window.open('https://dlzchui.azurewebsites.net/rfelogs/create-rfelog?invokeAppId=789012&lob=Surety%20Bond%20-%20for%20other%20facilities', '_blank')
     } else {
-        window.open('http://localhost:3000/rfelogs/create-rfelog?invokeAppId=123456&lob=Personal%20Lines', '_blank')
+        window.open('https://dlzchui.azurewebsites.net/rfelogs/create-rfelog?invokeAppId=123456&lob=Personal%20Lines', '_blank')
     }
     closePdfViewer()
 }
