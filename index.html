@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <link rel="stylesheet" href="./pdfCss/pdf.css">
+
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #007BFF;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background: red !important;
+            color: #ffffff !important;
+            padding: 10px !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;
+            box-shadow: rgb(10 10 10) 0px 4px 8px !important;
+            border: none !important;
+            font-weight: bold !important
+        }
+
+        nav button:hover {
+            background-color: #0056b3 !important;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .portfolio-item {
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="pdfViewer"></div>
+        <div>
+            <div>
+                <header>
+                    <h1>Your Name</h1>
+                </header>
+
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                    <button
+                        onclick="openPdf({path:'./assets/demopdf.pdf', invokeAppId: '123456', lobName: 'Personal Lines' })">
+                        Open PDF 1
+                    </button>
+                    <button
+                        onclick="openPdf({path:'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', invokeAppId: '123456', lobName: 'Personal Lines' })">
+                        Open PDF 2
+                    </button>
+                </nav>
+
+                <section id="home">
+                    <h2>Welcome to My Portfolio</h2>
+                    <p>Showcasing my work and passion for creating amazing things.</p>
+                </section>
+
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>I am a passionate web developer with a focus on creating user-friendly and visually appealing
+                        websites.</p>
+                </section>
+
+                <section id="portfolio">
+                    <h2>Portfolio</h2>
+
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 1" />
+                        <p>Project 1 - Description goes here.</p>
+                    </div>
+
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 2" />
+                        <p>Project 2 - Description goes here.</p>
+                    </div>
+
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 3" />
+                        <p>Project 3 - Description goes here.</p>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <p>Feel free to reach out for collaboration, questions, or just to say hello!</p>
+                </section>
+
+                <footer>
+                    <p>&copy; 2023 Your Name. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="./pdfJs/pdf.min.js"></script>
+    <script src="./pdfJs/pdf.js"></script>
+</body>
+
+</html>
